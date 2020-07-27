@@ -62,6 +62,13 @@ class ComplicationDataSource: NSObject, CLKComplicationDataSource {
             t.line1ImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
             t.line2TextProvider = CLKSimpleTextProvider(text: GioTexts.TitleLeft.rawValue)
             return t
+        default:
+            let t = CLKComplicationTemplateModularLargeStandardBody()
+            t.headerImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
+            t.headerTextProvider = CLKSimpleTextProvider(text: GioTexts.TitleLeft.rawValue)
+            t.body1TextProvider = CLKSimpleTextProvider(text: GioTexts.SubtitleLeft.rawValue)
+            t.body2TextProvider = CLKSimpleTextProvider(text: GioTexts.SubtitleRight.rawValue)
+            return t
         }
     }
 }

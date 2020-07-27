@@ -71,7 +71,7 @@ public class GameLoader: NSObject {
 			}
 		}
 	}
-	let session = WCSession.default()
+    let session = WCSession.default
 	var activationState: WCSessionActivationState = .notActivated
 	
 	var activationCompletion: ((Error?) -> Void)?

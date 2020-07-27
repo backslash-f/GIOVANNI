@@ -75,25 +75,24 @@ class ViewController: UIViewController {
 	}
 	
 	func encodeFiles(with URLs: [URL]) -> [[String: String]] {
-		return URLs.filter { $0.pathExtension.isValidROMExtension }.reduce([[String: String]]()) {
-			
-			var games = $0.0
+        return URLs
+            .filter { $0.pathExtension.isValidROMExtension }
+            .reduce([[String: String]]()) { result, url in
+                var games = result
+                let path = url
+                let name = path
+                    .lastPathComponent
+                    .components(separatedBy: ".")
+                    .dropLast()
+                    .joined()
 
-			let path = $0.1
-
-			let name = path
-				.lastPathComponent
-				.components(separatedBy: ".")
-				.dropLast()
-				.joined()
-			
-			let game: [String: String] = [
-				"name": name,
-				"path": path.absoluteString
-			]
-			games.append(game)
-			return games
-		}
+                let game: [String: String] = [
+                    "name": name,
+                    "path": path.absoluteString
+                ]
+                games.append(game)
+                return games
+        }
 	}
 }
 
@@ -101,7 +100,7 @@ extension ViewController: WCSessionDelegate {
 
 	func prepareSession() {
 		
-		let session = WCSession.default()
+		let session = WCSession.default
 		session.delegate = self
 		if session.activationState != .activated {
 			session.activate()
@@ -146,10 +145,10 @@ extension ViewController: WCSessionDelegate {
 			return
 		}
 		
-		if WCSession.default().activationState != .activated {
+		if WCSession.default.activationState != .activated {
 			prepareSession()
 		}
 		
-		WCSession.default().sendMessage(["games": games], replyHandler: nil, errorHandler: nil)
+		WCSession.default.sendMessage(["games": games], replyHandler: nil, errorHandler: nil)
 	}
 }

@@ -43,17 +43,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2DC850B1E5DC6CC00CC1028"
-            BuildableName = "giovanni_watchOS.app"
-            BlueprintName = "giovanni_watchOS"
-            ReferencedContainer = "container:giovanni.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -67,8 +56,8 @@
       allowLocationSimulation = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
-         RemotePath = "/watchGB WatchKit App">
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/GIOVANNI">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2DC850B1E5DC6CC00CC1028"
@@ -77,15 +66,6 @@
             ReferencedContainer = "container:giovanni.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2DC850B1E5DC6CC00CC1028"
-            BuildableName = "giovanni_watchOS.app"
-            BlueprintName = "giovanni_watchOS"
-            ReferencedContainer = "container:giovanni.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "CGBITMAP_CONTEXT_LOG_ERRORS"
@@ -93,8 +73,6 @@
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -104,8 +82,8 @@
       debugDocumentVersioning = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
-         RemotePath = "/watchGB WatchKit App">
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/GIOVANNI">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2DC850B1E5DC6CC00CC1028"
